@@ -4,22 +4,22 @@ document.getElementById('convert-btn').addEventListener('click', function() {
     
     if (number === '') {
         output.textContent = "Please enter a valid number";
-        return;
-    }
+    return;
+  }
 
-    const num = parseInt(number);
+  const num = parseInt(number);
 
-    if (num < 1) {
-        output.textContent = "Please enter a number greater than or equal to 1";
-        return;
-    }
+  if (num < 1) {
+    output.textContent = "Please enter a number greater than or equal to 1";
+    return;
+  }
 
-    if (num >= 4000) {
-        output.textContent = "Please enter a number less than or equal to 3999";
-        return;
-    }
+  if (num >= 4000) {
+    output.textContent = "Please enter a number less than or equal to 3999";
+    return;
+  }
 
-    output.textContent = convertToRoman(num);
+  output.textContent = convertToRoman(num);
 });
 
 function convertToRoman(num) {
