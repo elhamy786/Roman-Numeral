@@ -1,4 +1,4 @@
-body, 
+body,
 html {
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@ html {
   z-index: -1;
 }
 
-.container, 
+.container,
 .checker-container {
   text-align: center;
   background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
