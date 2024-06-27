@@ -3,28 +3,28 @@ document.getElementById('convert-btn').addEventListener('click', () => {
   const output = document.getElementById('output');
   const checkerOutput = document.getElementById('checker-output');
 
-    if (number === '') {
-        output.textContent = "Please enter a valid number";
-        checkerOutput.textContent = "Please enter a valid number";
-        return;
-    }
+  if (number === '') {
+    output.textContent = 'Please enter a valid number';
+    checkerOutput.textContent = "Please enter a valid number";
+    return;
+  }
 
-    const num = parseInt(number);
+  const num = parseInt(number);
 
-    if (num < 1) {
-        output.textContent = "Please enter a number greater than or equal to 1";
-        checkerOutput.textContent = "Please enter a number greater than or equal to 1";
-        return;
-    }
+  if (num < 1) {
+    output.textContent = 'Please enter a number greater than or equal to 1';
+    checkerOutput.textContent = 'Please enter a number greater than or equal to 1';
+    return;
+  }
 
-    if (num >= 4000) {
-        output.textContent = "Please enter a number less than or equal to 3999";
-        checkerOutput.textContent = "Please enter a number less than or equal to 3999";
-        return;
-    }
+  if (num >= 4000) {
+    output.textContent = 'Please enter a number less than or equal to 3999';
+    checkerOutput.textContent = 'Please enter a number less than or equal to 3999';
+    return;
+  }
 
-    output.textContent = convertToRoman(num);
-    checkerOutput.textContent = checkNumber(num);
+  output.textContent = convertToRoman(num);
+  checkerOutput.textContent = checkNumber(num);
 });
 function convertToRoman(num) {
   const romanNumerals = [
