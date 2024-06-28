@@ -1,3 +1,37 @@
+function convertToRoman(num) {
+  const romanNumerals = [
+    ['M', 1000],
+    ['CM', 900],
+    ['D', 500],
+    ['CD', 400],
+    ['C', 100],
+    ['XC', 90],
+    ['L', 50],
+    ['XL', 40],
+    ['X', 10],
+    ['IX', 9],
+    ['V', 5],
+    ['IV', 4],
+    ['I', 1],
+  ];
+
+  let result = '';
+
+  romanNumerals.forEach(([roman, value]) => {
+    while (num >= value) {
+      result += roman;
+      num -= value;
+    }
+  });
+
+  return result;
+}
+
+function checkNumber(num) {
+  // Your implementation for checking the number
+  return `Number is: ${num}`;
+}
+
 document.getElementById('convert-btn').addEventListener('click', () => {
   const number = document.getElementById('number').value;
   const output = document.getElementById('output');
@@ -26,31 +60,3 @@ document.getElementById('convert-btn').addEventListener('click', () => {
   output.textContent = convertToRoman(num);
   checkerOutput.textContent = checkNumber(num);
 });
-function convertToRoman(num) {
-  const romanNumerals = [
-    ['M', 1000],
-    ['CM', 900],
-    ['D', 500],
-    ['CD', 400],
-    ['C', 100],
-    ['XC', 90],
-    ['L', 50],
-    ['XL', 40],
-    ['X', 10],
-    ['IX', 9],
-    ['V', 5],
-    ['IV', 4],
-    ['I', 1]
-  ];
-
-    let result = '';
-
-    for (let [roman, value] of romanNumerals) {
-    while (num >= value) {
-      result += roman;
-      num -= value;
-    }
-  }
-
-  return result;
-}
